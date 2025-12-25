@@ -12,6 +12,7 @@ try:
     import urllib.parse
 except ImportError:
     print("❌ ERRO: Faltam bibliotecas! Rode: pip install groq yt-dlp PyNaCl")
+    print("❌ ERRO: high libraries! Rode: pip install groq yt-dlp PyNaCl")
     exit()
 
 # Carrega as chaves do arquivo .env
@@ -203,7 +204,7 @@ async def painel_cargos(interaction: discord.Interaction):
 # --- EVENTS ---
 @bot.event
 async def on_ready():
-    print(f'🐸 Sapão V9 (FULL) Logado como {bot.user}')
+    print(f'🐸 Sapão V9 (FULL) Logged in as {bot.user}')
     try:
         await bot.tree.sync()
     except: pass
