@@ -82,7 +82,7 @@ Como Rodar
 No Terminal:
 
 ```bash
-python sapao_bot.py
+python3 sapao_bot.py
 ``` 
 ### No Linux (Systemd Service): Se configurado como serviço:
 
@@ -187,7 +187,7 @@ ID_CANAL_SECRET = 123456789...
 ## How to Run
 Terminal:
 ```bash
-python sapao_bot.py
+python3 sapao_bot.py
 ```
 ## Linux (Systemd Service): If configured as a service:
 
