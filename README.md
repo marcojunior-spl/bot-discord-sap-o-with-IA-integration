@@ -52,8 +52,59 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
    git clone [https://github.com/SEU_USUARIO/NOME_DO_REPO.git](https://github.com/SEU_USUARIO/NOME_DO_REPO.git)
    cd NOME_DO_REPO
 
+### Instale asdependências: Crie um ambiente virtual (recomendado) e instale:
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+## Conteúdo do requirements.txt
+
+discord.py
+groq
+yt-dlp
+PyNaCl
+python-dotenv
+
+### Configure as Variáveis de Ambiente: #Crie um arquivo chamado .env na raiz do projeto e adicione suas chaves (NUNCA suba este arquivo para o GitHub):Hub):CORD_TOKEN=seu_token_aqui
+
+DISCORD_TOKEN=seu_token_aqui
+GROQ_KEY=sua_chave_groq_aqui
+
+### Configuração de IDs: No arquivo sapao_bot.py, ajuste os IDs dos canais e cargos do seu servidor:
+
+ID_CANAL_BOAS_VINDAS = 123456789...
+ID_CANAL_LOGS = 123456789...
+ID_CANAL_SECRET = 123456789...
+
+
+Como Rodar
+No Terminal:
+
+```bash
+python sapao_bot.py
+``` 
+### No Linux (Systemd Service): Se configurado como serviço:
+
+systemctl --user start sapao-bot.service
+
+### 📝 Lista de Comandos
+
+Comando,Descrição
+/sapao [msg],Pergunta algo para a IA.
+/imaginar [prompt],Gera uma imagem via IA.
+/tocar [nome],Toca uma música do YouTube.
+/parar,Para a música e desconecta.
+/saldo,Mostra suas MoscaCoins.
+/pix [user] [valor],Transfere moedas.
+/limpar [qtd],Apaga mensagens (Admin).
+/painel_cargos,Cria o menu de cargos (Admin).
+!sinc,Sincroniza os comandos Slash (Manual).
+
+Desenvolvido com 💚 e 🦟.
+
 ENGLISH
-↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 # 🐸 Sapão Bot V9
 
 A multifunctional Discord bot developed in Python, featuring Artificial Intelligence interactivity, high-quality Music playback, and a fun local Economy system.
@@ -106,3 +157,55 @@ A multifunctional Discord bot developed in Python, featuring Artificial Intellig
    cd REPO_NAME
 
    
+### install dependencies: Create a virtual environment (recommended) and install:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Content of requirements.txt:
+
+discord.py
+groq
+yt-dlp
+PyNaCl
+python-dotenv
+
+
+### Configure Environment Variables: Create a file named .env in the project root and add your keys (NEVER upload this file to GitHub):
+
+
+DISCORD_TOKEN=your_token_here
+GROQ_KEY=your_groq_key_here
+
+### ID Configuration: In the sapao_bot.py file, adjust the Channel and Role IDs to match your server:
+
+ID_CANAL_BOAS_VINDAS = 123456789...
+ID_CANAL_LOGS = 123456789...
+ID_CANAL_SECRET = 123456789...
+
+## How to Run
+Terminal:
+```bash
+python sapao_bot.py
+```
+## Linux (Systemd Service): If configured as a service:
+
+```bash
+systemctl --user start sapao-bot.service
+```
+
+## 📝 Command List
+
+Command,Description
+/sapao [msg],Ask the AI something.
+/imaginar [prompt],Generate an AI image.
+/tocar [name],Play music from YouTube.
+/parar,Stop music and disconnect.
+/saldo,Check your MoscaCoins balance.
+/pix [user] [value],Transfer coins to another user.
+/limpar [qty],Bulk delete messages (Admin).
+/painel_cargos,Create the role menu (Admin).
+!sinc,Sync Slash commands manually.
+
+# Developed with 💚 and 🦟.
