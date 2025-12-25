@@ -12,7 +12,7 @@ try:
     import urllib.parse
 except ImportError:
     print("❌ ERRO: Faltam bibliotecas! Rode: pip install groq yt-dlp PyNaCl")
-    print("❌ ERRO: high libraries! Rode: pip install groq yt-dlp PyNaCl")
+    print("❌ ERRO: libraries! -->>> (pip install groq yt-dlp PyNaCl) on Terminal")
     exit()
 
 # Carrega as chaves do arquivo .env
