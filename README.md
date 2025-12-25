@@ -49,8 +49,8 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU_USUARIO/NOME_DO_REPO.git](https://github.com/SEU_USUARIO/NOME_DO_REPO.git)
-   cd NOME_DO_REPO
+   git clone [https://github.com/marcojunior-spl/bot-discord-sap-o-with-IA-integration.git](https://github.com/marcojunior-spl/bot-discord-sap-o-with-IA-integration.git)
+   cd bot-discord-sap-o-with-IA-integration
 
 ### Instale asdependências: Crie um ambiente virtual (recomendado) e instale:
 
@@ -155,9 +155,8 @@ A multifunctional Discord bot developed in Python, featuring Artificial Intellig
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/REPO_NAME.git](https://github.com/YOUR_USERNAME/REPO_NAME.git)
-   cd REPO_NAME
-
+    git clone [https://github.com/marcojunior-spl/bot-discord-sap-o-with-IA-integration.git](https://github.com/marcojunior-spl/bot-discord-sap-o-with-IA-integration.git)
+   cd bot-discord-sap-o-with-IA-integration
    
 ### install dependencies: Create a virtual environment (recommended) and install:
 
