@@ -86,7 +86,9 @@ python3 sapao_bot.py
 ``` 
 ### No Linux (Systemd Service): Se configurado como serviço:
 
+```bash
 systemctl --user start sapao-bot.service
+```
 
 ### 📝 Lista de Comandos
 
