@@ -8,6 +8,7 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Discord.py](https://img.shields.io/badge/Discord.py-2.0%2B-5865F2)
 ![AI Model](https://img.shields.io/badge/AI-Llama%203.3-orange)
+![AI Model](https://img.shields.io/badge/dynamic/json)
 
 ## ✨ Funcionalidades
 
