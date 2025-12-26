@@ -1,7 +1,7 @@
 # bot-discord-sap-o-with-IA-integration
 A Discord bot with Groq integration, coin system, and log reporting.
 
-# 🐸 Sapão Bot V9
+# 🐸 Sapão Bot V10
 
 Um bot de Discord multifuncional desenvolvido em Python, focado em interatividade com Inteligência Artificial, Música de alta qualidade e um sistema de Economia divertido.
 
@@ -109,14 +109,14 @@ Comando,Descrição
 
 ENGLISH
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-# 🐸 Sapão Bot V9
+# 🐸 Sapão Bot V10
 
 A multifunctional Discord bot developed in Python, featuring Artificial Intelligence interactivity, high-quality Music playback, and a fun local Economy system.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Discord.py](https://img.shields.io/badge/Discord.py-2.0%2B-5865F2)
 ![AI Model](https://img.shields.io/badge/AI-Llama%203.3-orange)
-
+![JSON](https://img.shields.io/badge/Data-JSON-lightgrey?style=flat&logo=json&logoColor=000000)
 ## ✨ Features
 
 ### 🧠 Artificial Intelligence (Groq API)
