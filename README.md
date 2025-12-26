@@ -92,14 +92,14 @@ No arquivo `sapao_bot.py`, ajuste:
 **No Terminal:**
 
 ```bash
-python sapao_bot.py
+python sapao_bot_V10.py
 
 ```
 
 **No Linux (Systemd Service):**
 
 ```bash
-systemctl --user start sapao-bot.service
+systemctl --user start sapao-bot-V10.service
 
 ```
 
