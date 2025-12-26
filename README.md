@@ -162,8 +162,4 @@ A multifunctional Discord bot developed in Python, featuring AI interactivity, C
 | `/saldo` | Check balance. |
 | `/pix` | Transfer coins. |
 
-# Developed with 💚 and 🦟.
-
-```
-
-```
+# Developed with 💚 and 🦟
