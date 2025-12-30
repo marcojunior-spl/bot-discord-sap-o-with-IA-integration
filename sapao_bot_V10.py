@@ -427,7 +427,7 @@ async def loja(interaction: discord.Interaction, item: str):
 # --- EVENTOS ---
 @bot.event
 async def on_ready():
-    print(f'🐸 Sapão V9 (FULL) Logado como {bot.user}')
+    print(f'🐸 Sapão V10 (FULL) Logado como {bot.user}')
     try:
         await bot.tree.sync()
     except: pass
