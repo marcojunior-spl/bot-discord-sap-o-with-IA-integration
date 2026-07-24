@@ -14,15 +14,15 @@ try:
     import yt_dlp
     import urllib.parse
 except ImportError:
-    print("❌ ERRO: Faltam bibliotecas! Rode: pip install groq yt-dlp PyNaCl")
+    print(" ERRO: Faltam bibliotecas! Rode: pip install groq yt-dlp PyNaCl")
     exit()
 
 # Carrega as chaves do arquivo .env
 # Loads keys from the .env file
 load_dotenv()
 
-# --- ⚙️ CONFIGURAÇÃO ---
-# --- ⚙️ CONFIGURATION ---
+# ---  CONFIGURAÇÃO ---
+# ---  CONFIGURATION ---
 # O código agora busca a chave no ambiente, não mais no texto
 # The code now fetches the key from the environment, no longer from the text
 TOKEN_DISCORD = os.getenv("DISCORD_TOKEN")
@@ -53,8 +53,8 @@ LOJA_ITENS = {
 
 
 CARGOS_CONFIG = {
-    "ET 👽": 1452788860219031572,
-    "Gado 🐮": 1452789103530610790,
+    "ET ": 1452788860219031572,
+    "Gado ": 1452789103530610790,
 }
 
 # Palavras proibidas
@@ -71,9 +71,9 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 try:
     client_groq = AsyncGroq(api_key=KEY_GROQ)
 except:
-    print("⚠️ Erro na chave Groq")
+    print(" Erro na chave Groq")
 
-# --- 💰 ECONOMIA ---
+# ---  ECONOMIA ---
 ARQUIVO_BANCO = "banco.json"
 
 def carregar_banco():
@@ -91,14 +91,14 @@ def adicionar_moedas(user_id, quantidade):
     banco[uid]["xp"] += 1
     salvar_banco(banco)
 
-# --- ⚡ COMANDOS GERAIS ---
+# ---  COMANDOS GERAIS ---
 @bot.command()
 async def sinc(ctx):
     await bot.tree.sync()
-    await ctx.send("⚡ **Sincronizado com sucesso!**")
+    await ctx.send(" **Sincronizado com sucesso!**")
 
 
-# --- 🏗️ SISTEMA DE GESTÃO VIA IA ---
+# ---  SISTEMA DE GESTÃO VIA IA ---
 async def processar_comando_admin(message_or_interaction, resposta_ia):
     # Tenta encontrar um JSON na resposta da IA
     try:
@@ -120,19 +120,19 @@ async def processar_comando_admin(message_or_interaction, resposta_ia):
         if acao == "criar_canal":
             if tipo == "voz":
                 await guild.create_voice_channel(nome)
-                feedback = f"✅ 🏗️ Criei o canal de voz **🔊 {nome}** como pediu!"
+                feedback = f" Criei o canal de voz ** {nome}** como pediu!"
             else:
                 await guild.create_text_channel(nome)
-                feedback = f"✅ 🏗️ Criei o canal de texto **#️⃣ {nome}** como pediu!"
+                feedback = f" Criei o canal de texto **#️ {nome}** como pediu!"
         
         elif acao == "deletar_canal":
             # Procura o canal pelo nome
             canal = discord.utils.get(guild.channels, name=nome)
             if canal:
                 await canal.delete()
-                feedback = f"🗑️ 🔥 O canal **{nome}** foi de arrasta pra cima!"
+                feedback = f"  O canal **{nome}** foi de arrasta pra cima!"
             else:
-                feedback = f"❌ Não achei nenhum canal chamado **{nome}** para apagar."
+                feedback = f" Não achei nenhum canal chamado **{nome}** para apagar."
 
         # Responde ao usuário
         if isinstance(message_or_interaction, discord.Interaction):
@@ -153,14 +153,14 @@ async def limpar(interaction: discord.Interaction, quantidade: int):
     if quantidade > 100: quantidade = 100
     await interaction.response.defer(ephemeral=True)
     deleted = await interaction.channel.purge(limit=quantidade)
-    await interaction.followup.send(f"🧹 **Faxina feita!** Apaguei {len(deleted)} mensagens.", ephemeral=True)
+    await interaction.followup.send(f" **Faxina feita!** Apaguei {len(deleted)} mensagens.", ephemeral=True)
 
-@bot.tree.command(name="regras", description="📜 Mostra as regras do Pântano")
+@bot.tree.command(name="regras", description=" Mostra as regras do Pântano")
 async def regras(interaction: discord.Interaction):
     # Cria o visual da mensagem (Embed)
     embed = discord.Embed(
-        title="📜 Regras do Servidor",
-        description="Fique atento para não levar ban do Sapão! 🐸",
+        title=" Regras do Servidor",
+        description="Fique atento para não levar ban do Sapão! ",
         color=0x00FF00 # Cor Verde Sapão
     )
     
@@ -178,7 +178,7 @@ async def regras(interaction: discord.Interaction):
 
 
 
-# --- 🧠 IA & IMAGEM ---
+# ---  IA & IMAGEM ---
 @bot.tree.command(name="sapao", description="Fala com o Sapão (Com poderes de Admin)")
 async def sapao_slash(interaction: discord.Interaction, pergunta: str):
     await interaction.response.defer()
@@ -197,7 +197,7 @@ async def sapao_slash(interaction: discord.Interaction, pergunta: str):
     
     if eh_gerente:
         prompt_sistema += """
-        ⚠️ MODO ADMIN ATIVADO: Você tem permissão para gerenciar canais.
+         MODO ADMIN ATIVADO: Você tem permissão para gerenciar canais.
         Se o usuário pedir para CRIAR ou DELETAR um canal, NÃO responda com texto comum.
         Responda APENAS um JSON neste formato exato:
         {"acao": "criar_canal", "nome": "nome-do-canal", "tipo": "texto" (ou "voz")}
@@ -225,7 +225,7 @@ async def sapao_slash(interaction: discord.Interaction, pergunta: str):
         
         # 4. Se não era comando (era só conversa), manda a resposta normal
         if not executou:
-            await interaction.followup.send(f"🐸 **Sapão:** {conteudo}")
+            await interaction.followup.send(f" **Sapão:** {conteudo}")
             
     except Exception as e:
         await interaction.followup.send(f"Deu ruim no cérebro: {e}")
@@ -237,7 +237,7 @@ async def imaginar(interaction: discord.Interaction, prompt: str):
     await interaction.response.defer()
     prompt_url = urllib.parse.quote(prompt)
     url_imagem = f"https://image.pollinations.ai/prompt/{prompt_url}?width=1024&height=1024&nologo=true"
-    embed = discord.Embed(title=f"🎨 {prompt}", color=0xFF00FF)
+    embed = discord.Embed(title=f" {prompt}", color=0xFF00FF)
     embed.set_image(url=url_imagem)
     embed.set_footer(text=f"Pedido por {interaction.user.name}")
     await interaction.followup.send(embed=embed)
@@ -268,9 +268,9 @@ async def fofoca(interaction: discord.Interaction):
             messages=[{"role": "user", "content": prompt}],
             model=MODELO_GROQ
         )
-        await interaction.followup.send(f"📰 **Plantão da Fofoca:**\n{resp.choices[0].message.content}")
+        await interaction.followup.send(f" **Plantão da Fofoca:**\n{resp.choices[0].message.content}")
     except Exception as e:
-        await interaction.followup.send("Não consegui ler as fofocas... 😵")
+        await interaction.followup.send("Não consegui ler as fofocas... ")
 
 
 # --- 🎵 MÚSICA (CORRIGIDO) ---
@@ -280,7 +280,7 @@ ffmpeg_opts = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_
 @bot.tree.command(name="tocar", description="Toca música do YouTube")
 async def tocar(interaction: discord.Interaction, busca: str):
     if not interaction.user.voice:
-        await interaction.response.send_message("❌ Entre na voz primeiro!", ephemeral=True)
+        await interaction.response.send_message(" Entre na voz primeiro!", ephemeral=True)
         return
     await interaction.response.defer()
     
@@ -298,24 +298,24 @@ async def tocar(interaction: discord.Interaction, busca: str):
             
             if vc.is_playing(): vc.stop()
             vc.play(discord.FFmpegPCMAudio(url2, **ffmpeg_opts))
-            await interaction.followup.send(f"🎵 **Tocando:** {titulo}")
+            await interaction.followup.send(f" **Tocando:** {titulo}")
         except Exception as e:
-            await interaction.followup.send(f"❌ Erro ao tocar: {e}")
+            await interaction.followup.send(f" Erro ao tocar: {e}")
 
 @bot.tree.command(name="parar", description="Para a música")
 async def parar(interaction: discord.Interaction):
     if interaction.guild.voice_client:
         await interaction.guild.voice_client.disconnect()
-        await interaction.response.send_message("🛑 Parei!")
+        await interaction.response.send_message(" Parei!")
     else: 
         await interaction.response.send_message("Já tô quieto!", ephemeral=True)
 
-# --- 💰 ECONOMIA & CARGOS ---
+# ---  ECONOMIA & CARGOS ---
 @bot.tree.command(name="saldo", description="Vê suas moedas")
 async def saldo(interaction: discord.Interaction):
     banco = carregar_banco()
     saldo = banco.get(str(interaction.user.id), {}).get("saldo", 0)
-    await interaction.response.send_message(f"💰 Você tem **{saldo} MoscaCoins**!")
+    await interaction.response.send_message(f" Você tem **{saldo} MoscaCoins**!")
 
 @bot.tree.command(name="pix", description="Transfere moedas")
 async def pix(interaction: discord.Interaction, amigo: discord.User, valor: int):
@@ -325,11 +325,11 @@ async def pix(interaction: discord.Interaction, amigo: discord.User, valor: int)
     banco = carregar_banco()
     rem = str(interaction.user.id)
     if banco.get(rem, {}).get("saldo", 0) < valor:
-        await interaction.response.send_message("🚫 Sem grana!", ephemeral=True); return
+        await interaction.response.send_message(" Sem grana!", ephemeral=True); return
     
     adicionar_moedas(interaction.user.id, -valor)
     adicionar_moedas(amigo.id, valor)
-    await interaction.response.send_message(f"💸 Pix de {valor} para {amigo.mention}!")
+    await interaction.response.send_message(f" Pix de {valor} para {amigo.mention}!")
 
 class MenuCargos(discord.ui.Select):
     def __init__(self):
@@ -341,13 +341,13 @@ class MenuCargos(discord.ui.Select):
             r = interaction.guild.get_role(i)
             if r and str(i) in self.values and r not in interaction.user.roles:
                 await interaction.user.add_roles(r)
-        await interaction.followup.send("✅ Cargos dados!", ephemeral=True)
+        await interaction.followup.send(" Cargos dados!", ephemeral=True)
 
-@bot.tree.command(name="apostar", description="Tenta a sorte no Cassino do Pântano 🎰")
+@bot.tree.command(name="apostar", description="Tenta a sorte no Cassino do Pântano ")
 async def apostar(interaction: discord.Interaction, valor: int):
     # 1. Validações básicas
     if valor <= 0:
-        await interaction.response.send_message("❌ Não podes apostar nada ou valores negativos!", ephemeral=True)
+        await interaction.response.send_message(" Não podes apostar nada ou valores negativos!", ephemeral=True)
         return
 
     banco = carregar_banco()
@@ -355,7 +355,7 @@ async def apostar(interaction: discord.Interaction, valor: int):
     saldo_atual = banco.get(uid, {}).get("saldo", 0)
 
     if saldo_atual < valor:
-        await interaction.response.send_message(f"🚫 Você é pobre! Só tem **{saldo_atual}** moedas.", ephemeral=True)
+        await interaction.response.send_message(f"Você é pobre! Só tem **{saldo_atual}** moedas.", ephemeral=True)
         return
 
     # 2. A Mágica do Azar/Sorte
@@ -366,10 +366,10 @@ async def apostar(interaction: discord.Interaction, valor: int):
     if chance > 50: # 50% de chance de ganhar
         premio = valor
         adicionar_moedas(interaction.user.id, premio)
-        await interaction.followup.send(f"🎰 **DEU BOM!** Ganhaste **{premio}** moedas! 🐸💰")
+        await interaction.followup.send(f" **DEU BOM!** Ganhaste **{premio}** moedas! ")
     else:
         adicionar_moedas(interaction.user.id, -valor) # Remove o valor
-        await interaction.followup.send(f"📉 **Perdeu tudo!** O Sapão agradece a doação de **{valor}** moedas. Kkkkk")
+        await interaction.followup.send(f" **Perdeu tudo!** O Sapão agradece a doação de **{valor}** moedas. Kkkkk")
 
 
 
@@ -396,8 +396,8 @@ async def loja(interaction: discord.Interaction, item: str):
     
     if not produto:
         # Mostra a vitrine se o cara digitar errado
-        lista = "\n".join([f"• **{n}** - 💰 {d['preco']}" for n, d in LOJA_ITENS.items()])
-        await interaction.response.send_message(f"❌ Item não achado! **Itens à venda:**\n{lista}", ephemeral=True)
+        lista = "\n".join([f"• **{n}** -  {d['preco']}" for n, d in LOJA_ITENS.items()])
+        await interaction.response.send_message(f" Item não achado! **Itens à venda:**\n{lista}", ephemeral=True)
         return
 
     # Verifica saldo
@@ -407,7 +407,7 @@ async def loja(interaction: discord.Interaction, item: str):
     preco = produto["preco"]
     
     if saldo < preco:
-        await interaction.response.send_message(f"🚫 Você precisa de **{preco}** moedas, mas só tem **{saldo}**!", ephemeral=True)
+        await interaction.response.send_message(f" Você precisa de **{preco}** moedas, mas só tem **{saldo}**!", ephemeral=True)
         return
 
     # Tenta dar o cargo
@@ -416,18 +416,18 @@ async def loja(interaction: discord.Interaction, item: str):
         try:
             await interaction.user.add_roles(role)
             adicionar_moedas(interaction.user.id, -preco) # Cobra o valor
-            await interaction.response.send_message(f"✅ Compra realizada! Agora você é **{nome_produto}**! 🎉")
+            await interaction.response.send_message(f" Compra realizada! Agora você é **{nome_produto}**! ")
         except:
-            await interaction.response.send_message("❌ Erro: O bot não tem permissão para dar esse cargo (o cargo dele precisa estar acima do que ele vai dar).", ephemeral=True)
+            await interaction.response.send_message(" Erro: O bot não tem permissão para dar esse cargo (o cargo dele precisa estar acima do que ele vai dar).", ephemeral=True)
     else:
-        await interaction.response.send_message("❌ Erro config: Cargo não existe no servidor.", ephemeral=True)
+        await interaction.response.send_message(" Erro config: Cargo não existe no servidor.", ephemeral=True)
 
 
 
 # --- EVENTOS ---
 @bot.event
 async def on_ready():
-    print(f'🐸 Sapão V10 (FULL) Logado como {bot.user}')
+    print(f' Sapão V10 (FULL) Logado como {bot.user}')
     try:
         await bot.tree.sync()
     except: pass
@@ -449,7 +449,7 @@ async def on_message(message):
     for palavra in PALAVRAS_PROIBIDAS:
         if palavra in message.content.lower():
             await message.delete()
-            msg = await message.channel.send(f"😡 {message.author.mention} sem palavrão!")
+            msg = await message.channel.send(f" {message.author.mention} sem palavrão!")
             await asyncio.sleep(5)
             await msg.delete()
             return
@@ -484,7 +484,7 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
-# --- 🛡️ SISTEMA DE LOGS DE MODERAÇÃO ---
+# --- SISTEMA DE LOGS DE MODERAÇÃO ---
 
 @bot.event
 async def on_message_delete(message):
@@ -503,7 +503,7 @@ async def on_message_edit(before, after):
     if before.author.bot or before.content == after.content: return
     canal_logs = bot.get_channel(ID_CANAL_LOGS)
     if canal_logs:
-        embed = discord.Embed(title="📝 Mensagem Editada", color=0xFFFF00)
+        embed = discord.Embed(title=" Mensagem Editada", color=0xFFFF00)
         embed.add_field(name="Autor:", value=before.author.mention, inline=True)
         embed.add_field(name="Canal:", value=before.channel.mention, inline=True)
         embed.add_field(name="Antes:", value=before.content, inline=False)
