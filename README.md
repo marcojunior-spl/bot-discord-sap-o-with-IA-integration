@@ -1,7 +1,7 @@
 # bot-discord-sap-o-with-IA-integration
 A Discord bot with Groq integration, coin system, and log reporting.
 
-# 🐸 Sapão Bot V10 (Ultimate Edition)
+# Sapão Bot V10 (Ultimate Edition)
 
 Um bot de Discord multifuncional desenvolvido em Python, focado em interatividade com Inteligência Artificial, Música de alta qualidade e um sistema de Economia completo.
 
@@ -10,9 +10,9 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
 ![AI Model](https://img.shields.io/badge/AI-Llama%203.3-orange)
 ![JSON](https://img.shields.io/badge/Data-JSON-lightgrey?style=flat&logo=json&logoColor=000000)
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
-### 🧠 Inteligência Artificial & Gestão (Groq API)
+###  Inteligência Artificial & Gestão (Groq API)
 - **Chat Inteligente:** Converse com o Sapão usando o modelo `llama-3.3-70b-versatile`. Ele responde de forma curta, engraçada e **jamais admite ser da Meta**.
 - **Gestor de Canais (Function Calling):** Cargos de liderança podem pedir para a IA criar ou deletar canais usando linguagem natural (Ex: *"Cria uma sala de voz chamada Reunião"*).
 - **Fofoca:** O comando `/fofoca` lê as últimas mensagens do chat e cria um resumo engraçado do que está rolando.
@@ -23,7 +23,7 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
 - Comandos: `/tocar [busca/link]` e `/parar`.
 - *Requer FFmpeg instalado no sistema.*
 
-### 💰 Economia (MoscaCoins)
+### Economia (MoscaCoins)
 - **Ganho Automático:** Ganhe moedas interagindo no chat.
 - **Cassino:** Aposte suas moedas na rinha com `/apostar`.
 - **Loja de Cargos:** Compre cargos exclusivos com `/loja`.
@@ -104,7 +104,7 @@ systemctl --user start sapao-bot-V10.service
 
 ---
 
-## 📝 Lista de Comandos
+##  Lista de Comandos
 
 | Comando | Descrição |
 | --- | --- |
@@ -124,24 +124,24 @@ systemctl --user start sapao-bot-V10.service
 ENGLISH
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
-# 🐸 Sapão Bot V10
+#  Sapão Bot V10
 
 A multifunctional Discord bot developed in Python, featuring AI interactivity, Channel Management via LLM, Music, and a complete Economy system.
 
-## ✨ Features
+##  Features
 
-### 🧠 AI & Management (Groq API)
+###  AI & Management (Groq API)
 
 * **Smart Chat:** Chat with Sapão using Llama 3. It replies with a distinct personality.
 * **AI Channel Manager:** Authorized roles can ask the AI to create or delete channels using natural language (e.g., *"Create a voice channel named Gaming"*).
 * **Gossip (Fofoca):** Summarizes recent chat history with humor.
 * **Image Gen:** Text-to-image via Pollinations AI.
 
-### 🎵 Music
+###  Music
 
 * High-quality YouTube audio playback using `yt-dlp` and `ffmpeg`.
 
-### 💰 Economy (MoscaCoins)
+###  Economy (MoscaCoins)
 
 * **Passive Income:** Earn coins by chatting.
 * **Casino:** Gamble your coins with `/apostar`.
@@ -150,7 +150,7 @@ A multifunctional Discord bot developed in Python, featuring AI interactivity, C
 
 ---
 
-## 📝 Command List
+##  Command List
 
 | Command | Description |
 | --- | --- |
@@ -162,4 +162,3 @@ A multifunctional Discord bot developed in Python, featuring AI interactivity, C
 | `/saldo` | Check balance. |
 | `/pix` | Transfer coins. |
 
-# Developed with 💚 and 🦟
