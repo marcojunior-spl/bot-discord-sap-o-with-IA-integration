@@ -18,7 +18,7 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
 - **Fofoca:** O comando `/fofoca` lê as últimas mensagens do chat e cria um resumo engraçado do que está rolando.
 - **Geração de Imagens:** Cria imagens via Pollinations AI com `/imaginar`.
 
-### 🎵 Música (DJ Sapão)
+###  Música (DJ Sapão)
 - Reprodução de áudio do YouTube com alta qualidade.
 - Comandos: `/tocar [busca/link]` e `/parar`.
 - *Requer FFmpeg instalado no sistema.*
@@ -30,7 +30,7 @@ Um bot de Discord multifuncional desenvolvido em Python, focado em interatividad
 - **Banco de Dados:** Sistema local em JSON (`banco.json`).
 - **Pix:** Transferências entre usuários.
 
-### 🛡️ Moderação & Utilitários
+###  Moderação & Utilitários
 - **Logs de Auditoria:**
   - Mensagens apagadas vão para um canal secreto.
   - Mensagens editadas são registradas no canal de logs.
@@ -119,46 +119,5 @@ systemctl --user start sapao-bot-V10.service
 | `/painel_cargos` | Cria o menu de cargos (Admin). |
 | `!sinc` | Sincroniza os comandos Slash (Manual). |
 
-# Desenvolvido com 💚 e 🦟.
 
-ENGLISH
-↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-
-#  Sapão Bot V10
-
-A multifunctional Discord bot developed in Python, featuring AI interactivity, Channel Management via LLM, Music, and a complete Economy system.
-
-##  Features
-
-###  AI & Management (Groq API)
-
-* **Smart Chat:** Chat with Sapão using Llama 3. It replies with a distinct personality.
-* **AI Channel Manager:** Authorized roles can ask the AI to create or delete channels using natural language (e.g., *"Create a voice channel named Gaming"*).
-* **Gossip (Fofoca):** Summarizes recent chat history with humor.
-* **Image Gen:** Text-to-image via Pollinations AI.
-
-###  Music
-
-* High-quality YouTube audio playback using `yt-dlp` and `ffmpeg`.
-
-###  Economy (MoscaCoins)
-
-* **Passive Income:** Earn coins by chatting.
-* **Casino:** Gamble your coins with `/apostar`.
-* **Shop:** Buy roles with `/loja`.
-* **Banking:** Local JSON database with transfers via `/pix`.
-
----
-
-##  Command List
-
-| Command | Description |
-| --- | --- |
-| `/sapao [msg]` | Chat with AI (Managers can create channels). |
-| `/fofoca` | Summarizes recent chat messages. |
-| `/imaginar [prompt]` | Generates an AI image. |
-| `/apostar [val]` | Bet coins in the casino. |
-| `/loja [item]` | Buy roles from the shop. |
-| `/saldo` | Check balance. |
-| `/pix` | Transfer coins. |
 
