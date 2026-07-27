@@ -3,7 +3,7 @@ A Discord bot with Groq integration, coin system, and log reporting.
 
 # Sapão Bot V10 (Ultimate Edition)
 
-Um bot de Discord multifuncional desenvolvido em Python, focado em interatividade com Inteligência Artificial, Música de alta qualidade e um sistema de Economia completo.
+Um bot de Discord multifuncional desenvolvido em Python, focado em interatividade com inteligência artificial, música de alta qualidade e um sistema de economia completo.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Discord.py](https://img.shields.io/badge/Discord.py-2.0%2B-5865F2)
@@ -108,7 +108,7 @@ systemctl --user start sapao-bot-V10.service
 
 | Comando | Descrição |
 | --- | --- |
-| `/sapao [msg]` | Pergunta algo para a IA (Admins podem gerenciar canais). |
+| `/sapao [msg]` | Pergunta algo para a IA (admins podem gerenciar canais). |
 | `/fofoca` | A IA resume as últimas 30 mensagens do chat. |
 | `/imaginar [prompt]` | Gera uma imagem via IA. |
 | `/tocar [nome]` | Toca uma música do YouTube. |
